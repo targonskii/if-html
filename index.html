@@ -1,15 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My first page</title>
+    <style>
+        ul {
+            list-style: circle;
+        }
+            </style>
 </head>
 <body>
     <h1>Моя первая страница</h1>
-     <p>
-         <a href="./about/index.html">Об авторе</a>
-     </p>
+    <p><a href="./about/index.html">Об авторе</a></p>
+    <hr />
+    <p>По специальности я <mark>инженер</mark> в автомобильной сфере. 
+        Работаю в этой области <ins>более <sub>1</sub><sup>0</sup> лет</ins>.
+    </p>
+    <p>Но порой может наступить момент, когда перестаешь получать удовлетворение от проделанной 
+        работы и как говоpится <q>начинаешь искать новый вызов</q>. &#9875; &#9883; &iquest; &#x1f34c; &#x1f349;
+    </p>
+    <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2021preseason/FerrariLaunch/SF21-Profilo-DS.jpg" 
+        width="500" alt="ferrari_sf21">
+    <p>
+        <ol>
+            <li>Знакомство с Web
+                <ul>
+                    <li>Краткая история Web и что такое интернет.</li>
+                    <li>Как устроен браузер и как он получает страницы по сети.</li>
+                    <li>Что такое Git?</li>
+                    <li>Создание первого репозитория.</li>
+                    <li>О файле .gitignore.</li>
+                </ul>
+            </li>
+            <li>HTML-вёрстка - первые шаги
+                <ul>
+                    <li>Настройка рабочей среды.</li>
+                    <li>Краткая история HTML.</li>
+                    <li>Какие бывают теги и что такое атрибут.</li>
+                    <li>Теги для работы с текстом.</li>
+                    <li>Создание собственной страницы.</li>
+                </ul>
+            </li>
+            <li>Погружение в HTML-разметку
+                <ul>
+                    <li>Мета-теги.</li>
+                    <li>Мнемоники.</li>
+                    <li>Тег для работы с изображениями.</li>
+                    <li>Теги для работы со списками.</li>
+                    <li>Теги для работы с таблицами.</li>
+                    <li>Теги для работы с формами.</li>
+                    <li>Div-блоки.</li>
+                </ul>
+            </li>
+        </ol>
+    </p>
+    <table border="1" width="800px">
+        <tr>
+            <th>Tag</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>&lt;table&gt;</td>
+            <td>Defines a table</td>
+        </tr>
+        <tr>
+            <td>&lt;tr&gt;</td>
+            <td>Defines a row in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;th&gt;</td>
+            <td rowspan="2">Defines a "header cell" / "cell" in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;td&gt;</td>
+        </tr>
+        <tr>
+            <td colspan="2">Rarely used</td>
+        </tr>
+        <tr>
+            <td>&lt;caption&gt;</td>
+            <td>Defines a table caption</td>
+        </tr>
+        <tr>
+            <td>&lt;thead&gt;</td>
+            <td>Groups the header content in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;tbody&gt;</td>
+            <td>Groups the body content in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;tfoot&gt;</td>
+            <td>Groups the footer content in a table</td>
+        </tr>
+    </table>
+    <br />
+    <form action="/" method="GET">
+            <fieldset>
+                <legend>My first form</legend>
+                <label for="username">Name</label>
+                <br />
+                <input type="text" name="username" id="username" placeholder="Name" required />
+                <br />
+                <label for="email">Email</label>
+                <br />
+                <input type="email" name="email" id="email" required />
+                <br />
+                <label for="password">Password</label>
+                <br />
+                <input type="password" name="password" id="password" required />
+                <br />
+                <label for="lever">Your programming level</label>
+                <br />
+                <input type="range" name="level" id="level" min="1" max="10" />
+                <br />
+                <br />
+                <label for="html">What does HTML stand for?</label>
+                <br />
+                <br />
+                <input type="checkbox" name="html" id=""/>
+                <label for="html">Hyperlinks and Text Markup Language</label>
+                <br />
+                <input type="checkbox" name="html" />
+                <label for="html">Home Tool Markup Language</label>
+                <br />
+                <input type="checkbox" name="html" />
+                <label for="html">Hyper Text Markup Language</label>
+                <br />
+                <br />
+                <label for="http">What does HTTP stand for?</label>
+                <br />
+                <br />
+                <input type="radio" name="http" id="translate" />
+                <label for="http">Hyper Text Translate Protocol</label>
+                <br />
+                <input type="radio" name="http" id="transmission" />
+                <label for="http">Hyper Text transmission Protocol</label>
+                <br />
+                <input type="radio" name="http" id="transfer" />
+                <label for="http">Hyper Text transfer Protocol</label>
+                <br />
+                <label for="comment">Comment</label>
+                <br />
+                <textarea name="comment" maxlength="500" placeholder="Comment"></textarea> 
+                <br />
+                <label for="select_html">What does HTML stand for?</label>
+                <br />
+                <select name="select_html">
+                    <option value="" disabled selected>Your answer</option>
+                    <option value="1">Hyperlinks and Text Markup Language</option>
+                    <option value="2">Home Tool Markup Language</option>
+                    <option value="3">Hyper Text Markup Language</option>
+                </select>
+                <br />
+                <br />
+                <button type="submit">Send</button>
+                <br />
+                <br />
+            </fieldset>
+    </form>
 </body>
 </html>
