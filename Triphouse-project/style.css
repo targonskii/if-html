@@ -29,6 +29,7 @@
 
 .offer {
   height: 569px;
+
   padding-top: 120px;
 }
 
@@ -129,7 +130,6 @@ footer {
     width: 360px;
     height: 641px;
   }
-
   .offer {
     padding: 0px;
   }
@@ -161,6 +161,7 @@ footer {
     text-align: center;
     font-family: Roboto;
     font-weight: 400;
+
     margin-top: 19px;
     font-size: 15px;
     line-height: 18px;
