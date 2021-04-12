@@ -22,7 +22,7 @@
       url("./fonts/roboto-v27-latin-regular.svg#Roboto") format("svg"); /* Legacy iOS */
 }
 
-body {
+.wrapper {
   width: 1440px;
   margin: 0px auto;
 }
