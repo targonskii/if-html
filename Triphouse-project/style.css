@@ -23,13 +23,85 @@
 }
 
 .wrapper {
-  width: 1440px;
+  width: 100%;
   margin: 0px auto;
+}
+
+.header__main {
+  background: url(./images/background_main.svg);
+  width: 1440px;
+  height: 100vh;
+}
+
+.header__menu {
+  display: flex;
+  text-decoration: none;
+}
+
+.header__logo {
+  padding-top: 70px;
+  padding-left: 104px;
+}
+
+.header__navigation {
+  display: flex;
+  padding-top: 71px;
+  padding-left: 686px;
+}
+
+.header__navigation a {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-right: 24px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 24px;
+  list-style-type: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header__navigation a:hover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin: 8px auto;
+  background: #f5bd41;
+}
+
+.header__buttons {
+  display: flex;
+  padding-top: 71px;
+}
+
+.header__buttons a {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 24px;
+}
+
+.header__search {
+  padding-left: 104px;
+  padding-top: 202px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.header__download {
+  padding-left: 585px;
+  padding-top: 120px;
+}
+
+.header__mobile {
+  display: none;
 }
 
 .offer {
   height: 569px;
-
   padding-top: 120px;
 }
 
@@ -126,6 +198,57 @@ footer {
 }
 
 @media (max-width: 360px) {
+  .header__main {
+    display: none;
+  }
+
+  .header__mobile {
+    background: url(./images/background_main.svg);
+    background-position: center;
+    display: block;
+    width: 360px;
+    height: 533px;
+  }
+
+  .header__menu_mobile {
+    display: flex;
+  }
+
+  .header__logo_mobile {
+    display: flex;
+  }
+
+  .header__logo_mobile img {
+    width: 120px;
+    height: 24px;
+    margin: 12px;
+    display: flex;
+  }
+
+  .header__buttons_mobile {
+    display: flex;
+    padding-left: 102px;
+  }
+
+  .header__buttons_mobile a {
+    display: flex;
+    margin: 12px 8px;
+  }
+
+  .header__search_mobile {
+    padding-left: 12px;
+    padding-top: 52px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 30px;
+    color: #ffffff;
+  }
+
+  .header__download_mobile {
+    padding-top: 250px;
+    padding-left: 40px;
+  }
+
   main {
     width: 360px;
     height: 641px;
@@ -168,7 +291,7 @@ footer {
   }
 
   footer {
-    width: 360px;
+    width: 100%;
     height: 203px;
   }
 
@@ -180,7 +303,7 @@ footer {
     display: block;
   }
 
-  .logo {
+  .footer__logo {
     position: absolute;
     padding-top: 40px;
     padding-left: 131px;
