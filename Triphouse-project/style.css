@@ -22,13 +22,14 @@
       url("./fonts/roboto-v27-latin-regular.svg#Roboto") format("svg"); /* Legacy iOS */
 }
 
-.wrapper {
+header {
   width: 100%;
+  max-width: 1440px;
   margin: 0px auto;
+  background: url(./images/background_main.svg);
 }
 
 .header__main {
-  background: url(./images/background_main.svg);
   width: 1440px;
   height: 100vh;
 }
