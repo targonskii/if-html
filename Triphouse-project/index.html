@@ -5,50 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="icon" href="./images/svg-sprite.svg"> -->
     <title>What do we offer</title>
 </head>
 <body>
+    <div class="wrapper">
         <header>
             <div class="header__main">
                 <div class="header__menu">
-                    <div class="header__logo">
-                        <img src="./images/logo_triphouse_blue.svg" alt="logo"/>
-                    </div>
-                    <div class="header__navigation">
-                        <a href="#">Stays</a>
-                        <a href="#">Attractions</a>
-                    </div>
-                    <div class="header__buttons">
-                        <a href="#"><img src="./images/night.svg" alt="night"></a>
-                        <a href="#"><img src="./images/account.svg" alt="account"></a>
-                    </div>
+                    <a href="#">
+                        <img src="./images/logo_triphouse_blue.svg" alt="logo" />
+                    </a>
+                    <ul>
+                        <li class="header__navigation"><a href="#">Stays</a></li>
+                        <li class="header__navigation"><a href="#">Attractions</a></li>
+                        <li><div class="header__night"></div></li>
+                        <li><div class="header__account"></div></li>
+                    </ul>
                 </div>
                 <div class="header__search">
-                    <p class="header__title">Discover stays<br>
+                    <p class="header__title">Discover stays<br />
                         to live, work or just relax</p>
-                    <input type="text" placeholder="Search">
+                    <form action="">
+                        <div class="header__destination">
+                            <p><label for="search">Your destination or hotel name</label></p>
+                            <input id="search" type="text" name="search" placeholder="New York" />
+                        </div>
+                        <div class="header__date">
+                            <p><label for="in">Check-in</label> - 
+                                <label for="out">Check-out</label>
+                            </p>
+                            <div>
+                                <input type="date" id="date" />
+                            </div>
+                        </div>
+                        <div class="header__people">
+                            <input type="text" placeholder="2 Adults — 0 Children — 1 Room" />
+                        </div>
+                        <button>Search</button>
+                    </form>
                 </div>
                 <div class="header__download">
                     <a href="#"><img src="./images/google-play.svg" alt="google-play"></a>
                     <a href="#"><img src="./images/app_store.svg" alt="app_store"></a>
                 </div>
             </div>
-
             <div class="header__mobile">
                 <div class="header__menu_mobile">
                     <div class="header__logo_mobile">
                         <img src="./images/logo_triphouse_blue_mobile.svg" alt="logo"/>
                     </div>
                     <div class="header__buttons_mobile">
-                        <a href="#"><img src="./images/night_mobile.svg" alt="night"></a>
-                        <a href="#"><img src="./images/account_mobile.svg" alt="account"></a>
-                        <a href="#"><img src="./images/menu_header_mobile.svg" alt="menu"></a>
+                        <div class="header__night_mobile"></div>
+                        <div class="header__account_mobile"></div>
+                        <div class="header__bar_mobile"></div>
                     </div>
                 </div>
                 <div class="header__search_mobile">
                     <p class="header__title_mobile">Discover stays<br>
-                        to live, work or just relax</p>
-                    <input type="text" placeholder="Search">
+                                to live, work or just relax</p>
+                    <form class="header__form_mobile" action="">
+                        <div class="header__windows_mobile">
+                            <div class="header__destination_mobile">
+                                <input id="search" type="text" name="search" placeholder="Your destination or hotel name" />
+                            </div>
+                            <div class="header__check_mobile">
+                                <div class="header__in_mobile">
+                                    <input type="date" id="in" />
+                                </div>
+                                <div class="header__out_mobile">
+                                    <input type="date" id="out" />
+                                </div>
+                            </div>
+                            <div class="header__people_mobile">
+                                <input type="text" placeholder="2 Adults — 0 Children — 1 Room" />
+                            </div>
+                            <button>Search</button>
+                        </div>
+                    </form>
                 </div>
                 <div class="header__download_mobile">
                     <a href="#"><img src="./images/google-play.svg" alt="google-play"></a>
@@ -116,5 +150,6 @@
                 <p class="copyright__mobile">&copy; 2020 Triphouse, Inc. All rights reserved.</p>
             </section>
         </footer>
+    </div>
 </body>
 </html>

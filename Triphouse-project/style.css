@@ -21,39 +21,40 @@
     /* Safari, Android, iOS */
       url("./fonts/roboto-v27-latin-regular.svg#Roboto") format("svg"); /* Legacy iOS */
 }
+.wrapper {
+  max-width: 1440px;
+  margin: 0px auto;
+}
 
 header {
   width: 100%;
-  max-width: 1440px;
-  margin: 0px auto;
   background: url(./images/background_main.svg);
+  background-size: cover;
 }
 
 .header__main {
-  width: 1440px;
+  padding-top: 51px;
+  padding-left: 104px;
   height: 100vh;
 }
 
 .header__menu {
   display: flex;
-  text-decoration: none;
+  justify-content: space-between;
+  margin-bottom: 202px;
 }
 
-.header__logo {
-  padding-top: 70px;
-  padding-left: 104px;
-}
-
-.header__navigation {
+.header__menu ul {
+  list-style-type: none;
   display: flex;
-  padding-top: 71px;
-  padding-left: 686px;
+  align-items: center;
 }
 
-.header__navigation a {
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-right: 24px;
+.header__menu ul li {
+  margin-left: 25px;
+}
+
+.header__menu ul li a {
   font-family: Roboto;
   font-weight: 400;
   font-size: 24px;
@@ -62,39 +63,99 @@ header {
   color: #ffffff;
 }
 
+.header__night {
+  background: url(./images/png-sprite.png);
+  background-position: -5px -90px;
+  width: 30px;
+  height: 30px;
+  margin-left: 48px;
+}
+
+.header__account {
+  background: url(./images/png-sprite.png);
+  background-position: -5px -0px;
+  width: 40px;
+  height: 40px;
+  margin-right: 104px;
+}
+
+.header__account:hover {
+  background: url(./images/png-sprite.png);
+  background-position: -5px -45px;
+  width: 40px;
+  height: 40px;
+}
+
+.header__navigation {
+  position: relative;
+}
+
 .header__navigation a:hover::after {
   content: "";
   position: absolute;
-  display: block;
-  width: 50px;
+  width: 100%;
   height: 4px;
-  margin: 8px auto;
   background: #f5bd41;
-}
-
-.header__buttons {
-  display: flex;
-  padding-top: 71px;
-}
-
-.header__buttons a {
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-left: 24px;
+  top: 38px;
+  left: 0px;
 }
 
 .header__search {
-  padding-left: 104px;
-  padding-top: 202px;
+  margin-bottom: 120px;
+  margin-right: 104px;
+}
+
+.header__title {
+  display: flex;
+  line-height: 50px;
   font-family: Roboto;
   font-weight: 500;
   font-size: 50px;
   color: #ffffff;
+  padding-bottom: 100px;
+}
+
+form {
+  display: flex;
+}
+
+form p {
+  color: #ffffff;
+  line-height: 21px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+form .header__destination {
+  flex-grow: 4;
+}
+
+form .header__date {
+  flex-grow: 2;
+}
+
+form .header__people {
+  flex-grow: 3;
+  display: flex;
+  padding-top: 45px;
+}
+
+form button {
+  flex-grow: 2;
+  height: 64px;
+  margin-top: 45px;
+}
+
+form input {
+  height: 64px;
+  width: 100%;
 }
 
 .header__download {
-  padding-left: 585px;
-  padding-top: 120px;
+  display: flex;
+  justify-content: center;
 }
 
 .header__mobile {
@@ -102,8 +163,8 @@ header {
 }
 
 .offer {
-  height: 569px;
   padding-top: 120px;
+  padding-bottom: 122px;
 }
 
 .offer__h1 {
@@ -149,7 +210,6 @@ header {
 }
 
 footer {
-  width: 1440px;
   background: #10367c;
 }
 
@@ -195,6 +255,7 @@ footer {
   position: absolute;
   padding-left: 103px;
   padding-top: 494px;
+  padding-bottom: 120px;
   font-size: 15px;
 }
 
@@ -209,10 +270,13 @@ footer {
     display: block;
     width: 360px;
     height: 533px;
+    padding: 0px 15px;
   }
 
   .header__menu_mobile {
     display: flex;
+    margin-bottom: 52px;
+    padding-top: 12px;
   }
 
   .header__logo_mobile {
@@ -222,31 +286,120 @@ footer {
   .header__logo_mobile img {
     width: 120px;
     height: 24px;
-    margin: 12px;
     display: flex;
+  }
+  .header__night_mobile {
+    background: url(./images/png-sprite.png);
+    background-position: -5px -175px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .header__account_mobile {
+    background: url(./images/png-sprite.png);
+    background-position: -5px -125px;
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+  }
+
+  .header__bar_mobile {
+    background: url(./images/png-sprite.png);
+    background-position: -5px -154px;
+    width: 24px;
+    height: 16px;
+    margin-left: 16px;
   }
 
   .header__buttons_mobile {
     display: flex;
     padding-left: 102px;
+    align-items: center;
   }
 
-  .header__buttons_mobile a {
-    display: flex;
-    margin: 12px 8px;
-  }
-
-  .header__search_mobile {
-    padding-left: 12px;
-    padding-top: 52px;
+  .header__title_mobile {
+    padding-bottom: 31px;
     font-family: Roboto;
     font-weight: 500;
     font-size: 30px;
     color: #ffffff;
+    display: block;
+  }
+
+  .header__search_mobile {
+    display: block;
+  }
+
+  .header__windows_mobile {
+    background: #f5bd41;
+    padding: 8px;
+    display: block;
+  }
+
+  .header__form_mobile {
+    display: block;
+    padding-bottom: 32px;
+  }
+
+  .header__destination_mobile {
+    display: flex;
+    padding-bottom: 8px;
+  }
+
+  .header__destination_mobile input {
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .header__check_mobile {
+    display: flex;
+  }
+
+  .header__in_mobile {
+    padding-bottom: 8px;
+  }
+
+  .header__in_mobile input {
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+    width: 101%;
+  }
+
+  .header__out_mobile {
+    padding-left: 8px;
+    padding-bottom: 8px;
+  }
+
+  .header__out_mobile input {
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+    width: 105%;
+  }
+
+  .header__people_mobile {
+    display: flex;
+    padding-bottom: 8px;
+  }
+
+  .header__people_mobile input {
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .header__windows_mobile button {
+    margin: 0px;
+    height: 48px;
+    width: 100%;
+    background: #3077c6;
+    border: none;
+    border-radius: 4px;
   }
 
   .header__download_mobile {
-    padding-top: 250px;
     padding-left: 40px;
   }
 
@@ -285,7 +438,6 @@ footer {
     text-align: center;
     font-family: Roboto;
     font-weight: 400;
-
     margin-top: 19px;
     font-size: 15px;
     line-height: 18px;
