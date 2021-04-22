@@ -251,7 +251,7 @@ footer {
   font-size: 15px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 859px) {
   .header__main {
     display: none;
   }
@@ -260,7 +260,7 @@ footer {
     background: url(./images/background_main.svg);
     background-position: center;
     display: block;
-    width: 360px;
+    width: 100%;
     height: 533px;
     padding: 0px 15px;
   }
@@ -396,7 +396,7 @@ footer {
   }
 
   main {
-    width: 360px;
+    width: 100%;
     height: 641px;
   }
   .offer {
