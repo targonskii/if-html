@@ -197,13 +197,10 @@ form input {
 
 .offer__item {
   text-align: center;
-  /* margin-top: 92px; */
 }
 
 .offer__text {
   margin-top: 44px;
-  /* top: 419px;
-  position: sticky; */
   font-family: Roboto;
   font-weight: normal;
   font-size: 24px;
@@ -228,6 +225,8 @@ footer {
   text-align: left;
   color: #ffffff;
   display: flex;
+  padding: 120px 104px;
+  justify-content: space-between;
 }
 
 .footer__header {
@@ -236,31 +235,23 @@ footer {
 
 .footer__about {
   list-style-type: none;
-  padding-left: 104px;
-  padding-top: 120px;
 }
 
 .footer__property {
   list-style-type: none;
-  padding-left: 223px;
-  padding-top: 120px;
 }
 
 .footer__support {
   list-style-type: none;
-  padding-left: 284px;
-  padding-top: 120px;
 }
 
 .copyright {
   position: absolute;
-  padding-left: 103px;
-  padding-top: 494px;
-  padding-bottom: 120px;
+  padding-top: 374px;
   font-size: 15px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 859px) {
   .header__main {
     display: none;
   }
@@ -269,7 +260,7 @@ footer {
     background: url(./images/background_main.svg);
     background-position: center;
     display: block;
-    width: 360px;
+    width: 100%;
     height: 533px;
     padding: 0px 15px;
   }
@@ -405,7 +396,7 @@ footer {
   }
 
   main {
-    width: 360px;
+    width: 100%;
     height: 641px;
   }
   .offer {
@@ -456,13 +447,14 @@ footer {
   }
 
   .footer__mobile {
-    display: block;
+    display: flex;
+    padding: 40px 67px 0px;
+    flex-direction: column;
   }
 
   .footer__logo {
-    position: absolute;
-    padding-top: 40px;
-    padding-left: 131px;
+    display: flex;
+    height: 19px;
   }
 
   .footer__links {
@@ -473,26 +465,13 @@ footer {
     line-height: 18px;
     color: #ffffff;
     text-decoration: underline;
-    position: absolute;
-    display: inline-flex;
-  }
-
-  .links__about {
-    padding: 99px 0px 0px 67px;
-  }
-
-  .links__property {
-    padding: 99px 0px 0px 16px;
-  }
-
-  .links__support {
-    padding: 99px 0px 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
   }
 
   .copyright__mobile {
-    position: absolute;
-    padding-left: 71px;
-    padding-top: 149px;
+    padding-top: 32px;
     font-size: 12px;
     font-family: Roboto;
     font-style: normal;
