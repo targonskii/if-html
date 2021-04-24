@@ -86,11 +86,21 @@ header {
   height: 40px;
 }
 
-.header__navigation {
+.header__menu li {
   position: relative;
 }
 
-.header__navigation a:hover::after {
+.header__stays::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #f5bd41;
+  top: 38px;
+  left: 0px;
+}
+
+.header__attractions:hover::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -118,7 +128,7 @@ form {
   display: flex;
 }
 
-form p {
+form label {
   color: #ffffff;
   line-height: 21px;
   font-family: Roboto;
@@ -127,34 +137,89 @@ form p {
   margin-bottom: 24px;
 }
 
-form .header__destination {
-  flex-grow: 4;
+form input {
+  height: 64px;
+  width: 100%;
+  padding-left: 24px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #383838;
+  border: 3px solid #f3f3f4;
 }
 
-form .header__date {
-  flex-grow: 2;
+.header__destination {
+  flex-grow: 10;
 }
 
-form .header__people {
+.header__destination p {
+  padding-bottom: 24px;
+  padding-left: 20px;
+}
+
+.header__destination input {
+  border-radius: 8px 0px 0px 8px;
+  border-right: none;
+}
+
+.header__destination input::placeholder {
+  color: #383838;
+}
+
+.header__date {
+  flex-grow: 0;
+  display: flex;
+}
+
+.header__date p {
+  padding-bottom: 24px;
+}
+
+.header__date input {
+  border-left: none;
+  border-right: none;
+}
+
+.header__in p {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.header__people {
   flex-grow: 3;
   display: flex;
   padding-top: 45px;
 }
 
-form button {
-  flex-grow: 2;
-  height: 64px;
-  margin-top: 45px;
+.header__people input {
+  border-left: none;
+  border-radius: 0px 8px 8px 0px;
 }
 
-form input {
+.header__people input::placeholder {
+  color: #383838;
+}
+
+form button {
+  width: 192px;
+  flex-grow: 1;
   height: 64px;
-  width: 100%;
+  margin-top: 45px;
+  color: #ffffff;
+  background: #3077c6;
+  border-radius: 8px;
 }
 
 .header__download {
   display: flex;
   justify-content: center;
+}
+
+.header__download a {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .header__mobile {
@@ -205,6 +270,61 @@ form input {
   font-weight: normal;
   font-size: 24px;
   line-height: 28px;
+}
+
+.homes__section {
+  padding: 0 105px;
+  background: #eaf0f9;
+}
+
+.homes__h1 {
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  color: #383838;
+  padding-top: 120px;
+  padding-bottom: 105px;
+}
+
+.homes__slider {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 120px;
+}
+
+.homes__slider img {
+  max-width: 100%;
+  height: auto;
+}
+
+.homes__slider a {
+  text-decoration: none;
+}
+
+.homes__slider div:last-child {
+  position: relative;
+}
+
+.homes__slider div:last-child:after {
+  content: url(./images/arrow.svg);
+  position: absolute;
+  top: 127px;
+  left: 272px;
+}
+
+.homes__slider p {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3077c6;
+  padding-top: 24px;
+}
+
+.homes__slider p:last-child {
+  color: #bfbfbf;
 }
 
 footer {
@@ -328,6 +448,15 @@ footer {
     display: block;
   }
 
+  .header__windows_mobile input::placeholder {
+    color: #383838;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
   .header__form_mobile {
     display: block;
     padding-bottom: 32px;
@@ -338,10 +467,22 @@ footer {
     padding-bottom: 8px;
   }
 
+  .header__destination_mobile label {
+    position: relative;
+  }
+
+  .header__destination_mobile label::before {
+    position: absolute;
+    content: url(./images/search.svg);
+    top: 16px;
+    left: 12px;
+  }
+
   .header__destination_mobile input {
     height: 48px;
     border: none;
     border-radius: 4px;
+    padding-left: 36px;
   }
 
   .header__check_mobile {
@@ -350,25 +491,51 @@ footer {
 
   .header__in_mobile {
     padding-bottom: 8px;
+    position: relative;
+    flex: 1;
+    margin-right: 8px;
+  }
+
+  .header__in_mobile label {
+    color: #383838;
+    position: absolute;
+    font-size: 12px;
+    line-height: 14px;
+    top: 6px;
+    left: 8px;
   }
 
   .header__in_mobile input {
     height: 48px;
     border: none;
     border-radius: 4px;
-    width: 101%;
+    padding: 24px 0px 0px 8px;
+    font-size: 15px;
+    line-height: 18px;
   }
 
   .header__out_mobile {
-    padding-left: 8px;
+    position: relative;
     padding-bottom: 8px;
+    flex: 1;
+  }
+
+  .header__out_mobile label {
+    color: #383838;
+    position: absolute;
+    font-size: 12px;
+    line-height: 14px;
+    top: 6px;
+    left: 8px;
   }
 
   .header__out_mobile input {
     height: 48px;
     border: none;
     border-radius: 4px;
-    width: 105%;
+    padding: 24px 0px 0px 8px;
+    font-size: 15px;
+    line-height: 18px;
   }
 
   .header__people_mobile {
@@ -376,10 +543,72 @@ footer {
     padding-bottom: 8px;
   }
 
-  .header__people_mobile input {
+  .header__aduls_mobile {
+    position: relative;
+  }
+
+  .header__aduls_mobile input {
     height: 48px;
     border: none;
-    border-radius: 4px;
+    border-radius: 4px 0px 0px 4px;
+    padding: 16px 8px 0px 8px;
+  }
+
+  .header__aduls_mobile label {
+    color: #383838;
+    position: absolute;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    top: 6px;
+    left: 8px;
+  }
+
+  .header__children_mobile {
+    position: relative;
+  }
+
+  .header__children_mobile input {
+    height: 48px;
+    border: none;
+    padding: 16px 8px 0px 8px;
+  }
+
+  .header__children_mobile label {
+    position: absolute;
+    color: #383838;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    top: 6px;
+    left: 8px;
+  }
+
+  .header__rooms_mobile {
+    position: relative;
+  }
+
+  .header__rooms_mobile input {
+    height: 48px;
+    border: none;
+    border-radius: 0px 4px 4px 0px;
+    padding: 16px 8px 0px 8px;
+  }
+
+  .header__rooms_mobile label {
+    position: absolute;
+    color: #383838;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    top: 6px;
+    left: 8px;
   }
 
   .header__windows_mobile button {
@@ -389,6 +618,11 @@ footer {
     background: #3077c6;
     border: none;
     border-radius: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 22px;
   }
 
   .header__download_mobile {
@@ -397,7 +631,6 @@ footer {
 
   main {
     width: 100%;
-    height: 641px;
   }
   .offer {
     padding: 0px;
@@ -417,6 +650,7 @@ footer {
     display: flex;
     flex-direction: column;
     margin-top: 0px;
+    margin-bottom: 40px;
     align-items: normal;
   }
 
@@ -435,6 +669,51 @@ footer {
     margin-top: 19px;
     font-size: 15px;
     line-height: 18px;
+  }
+
+  .homes__section {
+    padding: 0;
+  }
+
+  .homes__h1 {
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    color: #383838;
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+
+  .homes__slider {
+    justify-content: space-evenly;
+    padding-bottom: 40px;
+  }
+
+  .homes__slider div {
+    max-width: 156px;
+  }
+
+  .homes__slider div:nth-child(3) {
+    display: none;
+  }
+
+  .homes__slider div:nth-child(4) {
+    display: none;
+  }
+
+  .homes__slider p {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    padding-top: 6px;
+  }
+
+  .homes__slider p:last-child {
+    padding-top: 4px;
   }
 
   footer {
