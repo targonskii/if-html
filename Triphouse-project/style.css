@@ -696,6 +696,17 @@ footer {
     max-width: 156px;
   }
 
+  .homes__slider div:nth-child(2) {
+    position: relative;
+  }
+
+  .homes__slider div:nth-child(2)::after {
+    content: url(./images/arrow_mobile.svg);
+    position: absolute;
+    top: 60px;
+    left: 135px;
+  }
+
   .homes__slider div:nth-child(3) {
     display: none;
   }
