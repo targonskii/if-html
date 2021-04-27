@@ -17,8 +17,8 @@
                         <img src="./images/logo_triphouse_blue.svg" alt="logo" />
                     </a>
                     <ul>
-                        <li class="header__navigation"><a href="#">Stays</a></li>
-                        <li class="header__navigation"><a href="#">Attractions</a></li>
+                        <li class="header__stays"><a href="#">Stays</a></li>
+                        <li class="header__attractions"><a href="#">Attractions</a></li>
                         <li><div class="header__night"></div></li>
                         <li><div class="header__account"></div></li>
                     </ul>
@@ -28,19 +28,27 @@
                         to live, work or just relax</p>
                     <form action="">
                         <div class="header__destination">
-                            <p><label for="search">Your destination or hotel name</label></p>
+                            <p>
+                                <label for="search">Your destination or hotel name</label>
+                            </p>
                             <input id="search" type="text" name="search" placeholder="New York" />
                         </div>
                         <div class="header__date">
-                            <p><label for="in">Check-in</label> - 
-                                <label for="out">Check-out</label>
-                            </p>
-                            <div>
+                            <div class="header__in">
+                                <p>
+                                    <label for="in">Check-in - </label>
+                                </p>
+                                <input type="date" id="date" />
+                            </div>
+                            <div class="header__out">
+                                <p>
+                                    <label for="in">Check-out</label>
+                                </p>
                                 <input type="date" id="date" />
                             </div>
                         </div>
                         <div class="header__people">
-                            <input type="text" placeholder="2 Adults — 0 Children — 1 Room" />
+                            <input type="number" placeholder="2 Adults — 0 Children — 1 Room" />
                         </div>
                         <button>Search</button>
                     </form>
@@ -67,18 +75,32 @@
                     <form class="header__form_mobile" action="">
                         <div class="header__windows_mobile">
                             <div class="header__destination_mobile">
+                                <label for=""></label>
                                 <input id="search" type="text" name="search" placeholder="Your destination or hotel name" />
                             </div>
                             <div class="header__check_mobile">
                                 <div class="header__in_mobile">
-                                    <input type="date" id="in" />
+                                    <label for="">Check-in date</label>
+                                    <input type="date" id="in" value="2021-09-15" />
                                 </div>
                                 <div class="header__out_mobile">
-                                    <input type="date" id="out" />
+                                    <label for="">Check-out date</label>
+                                    <input type="date" id="out" value="2021-09-19" />
                                 </div>
                             </div>
                             <div class="header__people_mobile">
-                                <input type="text" placeholder="2 Adults — 0 Children — 1 Room" />
+                                <div class="header__aduls_mobile">
+                                    <label for="">Adults</label>
+                                    <input type="number" placeholder="0" />
+                                </div>
+                                <div class="header__children_mobile">
+                                    <label for="">Children</label>
+                                    <input type="number" placeholder="0" />
+                                </div>
+                                <div class="header__rooms_mobile">
+                                    <label for="">Rooms</label>
+                                    <input type="number" placeholder="0" />
+                                </div>
                             </div>
                             <button>Search</button>
                         </div>
@@ -111,6 +133,38 @@
                             <img src="./images/reviews.svg" alt="reviews" />
                             <p class="offer__text">Real guest reviews</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="homes__section">
+                <h1 class="homes__h1">Homes guests loves</h1>
+                <div class="homes__slider">
+                    <div>
+                        <a href="">
+                            <img src="./images/hotel_leopold.svg" alt="hotel_leopold" />
+                            <p>Hotel Leopold</p>
+                            <p>Saint Petersburg, Russia</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="./images/apartment_sunshine.svg" alt="apartment_sunshine" />
+                            <p>Apartment Sunshine</p>
+                            <p>Santa  Cruz de Tenerife, <br />
+                                Spain</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href=""><img src="./images/villa_kunerad.svg" alt="villa_kunerad" />
+                            <p>Villa Kunerad</p>
+                            <p>Vysokie Tatry, Slowakia</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href=""><img src="./images/hostel_friendship.svg" alt="hostel_friendship">
+                            <p>Hostel Friendship</p>
+                            <p>Berlin, Germany</p>
+                        </a>
                     </div>
                 </div>
             </section>
