@@ -2,9 +2,9 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/roboto-v27-latin-regular.eot");
+  src: url("../../fonts/roboto-v27-latin-regular.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("./fonts/roboto-v27-latin-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/roboto-v27-latin-regular.woff2") format("woff2"), url("./fonts/roboto-v27-latin-regular.woff") format("woff"), url("./fonts/roboto-v27-latin-regular.ttf") format("truetype"), url("./fonts/roboto-v27-latin-regular.svg#Roboto") format("svg");
+  src: local(""), url("../../fonts/roboto-v27-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/roboto-v27-latin-regular.woff2") format("woff2"), url("../../fonts/roboto-v27-latin-regular.woff") format("woff"), url("../../fonts/roboto-v27-latin-regular.ttf") format("truetype"), url("../../fonts/roboto-v27-latin-regular.svg#Roboto") format("svg");
   /* Legacy iOS */
 }
 * {
@@ -20,7 +20,7 @@
 
 header {
   width: 100%;
-  background: url(./images/background_main.svg);
+  background: url(../../images/background_main.svg);
   background-size: cover;
 }
 
@@ -143,20 +143,20 @@ header {
   left: 0px;
 }
 .header__night {
-  background: url(./images/png-sprite.png);
+  background: url(../../images/png-sprite.png);
   background-position: -5px -90px;
   width: 30px;
   height: 30px;
   margin-left: 48px;
 }
 .header__account {
-  background: url(./images/png-sprite.png);
+  background: url(../../images/png-sprite.png);
   background-position: -5px 0px;
   width: 40px;
   height: 40px;
 }
 .header__account:hover {
-  background: url(./images/png-sprite.png);
+  background: url(../../images/png-sprite.png);
   background-position: -5px -45px;
   width: 40px;
   height: 40px;
@@ -191,7 +191,7 @@ header {
     display: none;
   }
   .header__mobile {
-    background: url(./images/background_main.svg);
+    background: url(../../images/background_main.svg);
     background-position: center;
     display: block;
     width: 100%;
@@ -212,20 +212,20 @@ header {
     display: flex;
   }
   .header__night_mobile {
-    background: url(./images/png-sprite.png);
+    background: url(../../images/png-sprite.png);
     background-position: -5px -175px;
     width: 16px;
     height: 16px;
   }
   .header__account_mobile {
-    background: url(./images/png-sprite.png);
+    background: url(../../images/png-sprite.png);
     background-position: -5px -125px;
     width: 24px;
     height: 24px;
     margin-left: 16px;
   }
   .header__bar_mobile {
-    background: url(./images/png-sprite.png);
+    background: url(../../images/png-sprite.png);
     background-position: -5px -154px;
     width: 24px;
     height: 16px;
@@ -251,6 +251,7 @@ header {
     background: #f5bd41;
     padding: 8px;
     display: block;
+    min-width: 360px;
   }
   .header__windows_mobile input::placeholder {
     color: #383838;
@@ -286,7 +287,7 @@ header {
   }
   .header__destination_mobile label::before {
     position: absolute;
-    content: url(./images/search.svg);
+    content: url(../../images/search.svg);
     top: 16px;
     left: 12px;
   }
@@ -323,6 +324,7 @@ header {
     padding: 24px 0px 0px 8px;
     font-size: 15px;
     line-height: 18px;
+    width: 100%;
   }
   .header__out_mobile {
     position: relative;
@@ -346,6 +348,7 @@ header {
     padding: 24px 0px 0px 8px;
     font-size: 15px;
     line-height: 18px;
+    width: 100%;
   }
   .header__people_mobile {
     display: flex;
@@ -353,12 +356,14 @@ header {
   }
   .header__aduls_mobile {
     position: relative;
+    flex: 1;
   }
   .header__aduls_mobile input {
     height: 48px;
     border: none;
     border-radius: 4px 0px 0px 4px;
     padding: 16px 8px 0px 8px;
+    width: 100%;
   }
   .header__aduls_mobile label {
     color: #383838;
@@ -373,11 +378,13 @@ header {
   }
   .header__children_mobile {
     position: relative;
+    flex: 1;
   }
   .header__children_mobile input {
     height: 48px;
     border: none;
     padding: 16px 8px 0px 8px;
+    width: 100%;
   }
   .header__children_mobile label {
     position: absolute;
@@ -392,12 +399,14 @@ header {
   }
   .header__rooms_mobile {
     position: relative;
+    flex: 1;
   }
   .header__rooms_mobile input {
     height: 48px;
     border: none;
     border-radius: 0px 4px 4px 0px;
     padding: 16px 8px 0px 8px;
+    width: 100%;
   }
   .header__rooms_mobile label {
     position: absolute;
@@ -520,7 +529,7 @@ header {
   position: relative;
 }
 .homes__slider div:last-child:after {
-  content: url(./images/arrow.svg);
+  content: url(../../images/arrow.svg);
   position: absolute;
   top: 127px;
   left: 272px;
@@ -563,7 +572,7 @@ header {
     position: relative;
   }
   .homes__slider div:nth-child(2)::after {
-    content: url(./images/arrow_mobile.svg);
+    content: url(../../images/arrow_mobile.svg);
     position: absolute;
     top: 60px;
     left: 135px;

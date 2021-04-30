@@ -28,7 +28,7 @@
       position: relative;
     }
     div:last-child:after {
-      content: url(./images/arrow.svg);
+      content: url(../../images/arrow.svg);
       position: absolute;
       top: 127px;
       left: 272px;
@@ -71,7 +71,7 @@
         position: relative;
       }
       div:nth-child(2)::after {
-        content: url(./images/arrow_mobile.svg);
+        content: url(../../images/arrow_mobile.svg);
         position: absolute;
         top: 60px;
         left: 135px;
