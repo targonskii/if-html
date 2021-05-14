@@ -14,7 +14,6 @@
 }
 
 .wrapper {
-  max-width: 1440px;
   margin: 0px auto;
 }
 
@@ -208,7 +207,7 @@ header {
   line-height: 28px;
   text-align: center;
   padding-top: 36px;
-  padding-bottom: 24px;
+  padding-bottom: 24fpx;
 }
 .header__login form div {
   margin: 0;
